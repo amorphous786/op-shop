@@ -16,10 +16,17 @@ const productSchema = mongoose.Schema(
                   type:mongoose.Schema.Types.ObjectId,
                   required:true,
                   ref:'User',
+
             },
             name:{
                   type:String,
                   required:true,
+                  validate: {
+                    validator: (value)=>{
+                        return value
+                    },
+                    message:"Name Field is required"
+                  }
 
             },
             image:{
