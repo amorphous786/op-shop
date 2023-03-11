@@ -32,9 +32,9 @@ const addProduct = asyncHanlder(async (req,res)=>{
   const product_data = req.body
   console.log(user)
   try{
-    console.log("daddy is here")
+    // console.log("daddy is here")
     const product = await Product.create({...product_data,user:user})
-    console.log("daddy is here",product)
+    // console.log("daddy is here",product)
   if(product){
     res.json(product)
   }
@@ -44,7 +44,7 @@ const addProduct = asyncHanlder(async (req,res)=>{
   }
   }
   catch(error){
-    console.log("erroras",error)
+    // console.log("erroras",error)
     res.json(error)
   }
 });
